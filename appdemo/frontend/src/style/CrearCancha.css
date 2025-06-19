@@ -1,0 +1,193 @@
+/* CrearCancha.css - Tema Verde Premium */
+
+.crear-cancha-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background: #ffffff;
+    border-radius: 1.2rem;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    border: 1px solid #e8f5e9;
+}
+
+.crear-cancha-container h2 {
+    color: #1b5e20;
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-weight: 700;
+    position: relative;
+    letter-spacing: -0.5px;
+}
+
+.crear-cancha-container h2::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #4caf50, #8bc34a);
+    border-radius: 4px;
+}
+
+/* Formulario Moderno */
+.crear-cancha-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+/* Inputs Estilizados */
+.crear-cancha-container input,
+.crear-cancha-container select {
+    width: 100%;
+    padding: 1.1rem 1.5rem;
+    border: 2px solid #e0f2e9;
+    border-radius: 0.8rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #f8fbf8;
+    color: #2e3d49;
+    font-family: inherit;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.crear-cancha-container input:focus,
+.crear-cancha-container select:focus {
+    outline: none;
+    border-color: #66bb6a;
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(102, 187, 106, 0.15);
+    transform: translateY(-2px);
+}
+
+.crear-cancha-container input::placeholder {
+    color: #90a4ae;
+    opacity: 1;
+}
+
+/* Select Personalizado */
+.crear-cancha-container select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234caf50'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.5rem;
+    cursor: pointer;
+    padding-right: 3rem;
+}
+
+/* Botón Premium */
+.crear-cancha-container button[type="submit"] {
+    background: linear-gradient(135deg, #388e3c, #4caf50);
+    color: white;
+    border: none;
+    padding: 1.2rem;
+    border-radius: 0.8rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    margin-top: 1rem;
+    box-shadow: 0 4px 6px rgba(56, 142, 60, 0.15);
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.crear-cancha-container button[type="submit"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #2e7d32, #43a047);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+}
+
+.crear-cancha-container button[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(56, 142, 60, 0.25);
+}
+
+.crear-cancha-container button[type="submit"]:hover::before {
+    opacity: 1;
+}
+
+.crear-cancha-container button[type="submit"]:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(56, 142, 60, 0.3);
+}
+
+/* Efecto de onda al hacer clic */
+.crear-cancha-container button[type="submit"]::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+.crear-cancha-container button[type="submit"]:focus:not(:active)::after {
+    animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(20, 20);
+        opacity: 0;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .crear-cancha-container {
+        padding: 2rem;
+        margin: 1rem;
+        border-radius: 1rem;
+    }
+    
+    .crear-cancha-container h2 {
+        font-size: 1.8rem;
+    }
+    
+    .crear-cancha-container input,
+    .crear-cancha-container select {
+        padding: 1rem;
+    }
+    
+    .crear-cancha-container button[type="submit"] {
+        padding: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .crear-cancha-container {
+        padding: 1.5rem;
+    }
+    
+    .crear-cancha-container h2 {
+        font-size: 1.6rem;
+    }
+    
+    .crear-cancha-container form {
+        gap: 1.5rem;
+    }
+}

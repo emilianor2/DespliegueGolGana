@@ -1,0 +1,12 @@
+# service-db.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql
+  namespace: golgana-dev
+spec:
+  selector:
+    app: mysql
+  ports:
+    - port: 3306
+      targetPort: 3306

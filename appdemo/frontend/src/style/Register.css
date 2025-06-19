@@ -1,0 +1,187 @@
+/* Estilos para la página de Registro de Golgana */
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 3rem auto;
+    padding: 2.5rem;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .register-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  
+  .register-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a8753;
+    margin-bottom: 0.5rem;
+  }
+  
+  .register-title {
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+  
+  .register-subtitle {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .register-form {
+    width: 100%;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+    width: 100%;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+  }
+  
+  .form-control:focus {
+    outline: none;
+    border-color: #1a8753;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(26, 135, 83, 0.15);
+  }
+  
+  .form-control::placeholder {
+    color: #aaa;
+  }
+  
+  .form-select {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 16px;
+  }
+  
+  .form-select:focus {
+    outline: none;
+    border-color: #1a8753;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(26, 135, 83, 0.15);
+  }
+  
+  .register-button {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #1a8753 0%, #0d5c3a 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+  }
+  
+  .register-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(26, 135, 83, 0.3);
+  }
+  
+  .register-button:active {
+    transform: translateY(0);
+  }
+  
+  .register-divider {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    color: #999;
+    width: 100%;
+  }
+  
+  .register-divider::before,
+  .register-divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .register-divider-text {
+    padding: 0 1rem;
+  }
+  
+  .login-link {
+    margin-top: 2rem;
+    text-align: center;
+    color: #666;
+  }
+  
+  .login-link a {
+    color: #1a8753;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .login-link a:hover {
+    color: #0d5c3a;
+    text-decoration: underline;
+  }
+  
+  .alert {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .alert-danger {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+  }
+  
+  .alert-success {
+    background-color: #dcfce7;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .register-container {
+      width: 90%;
+      padding: 2rem 1.5rem;
+      margin: 2rem auto;
+    }
+  }

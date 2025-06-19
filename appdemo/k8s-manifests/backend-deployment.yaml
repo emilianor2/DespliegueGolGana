@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: golgana-dev # o dev, elegí uno y mantenelo igual en todos los yaml
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: golgana-backend:v1 # << ACA USAS LA IMAGEN QUE YA CREASTE
+        imagePullPolicy: IfNotPresent # para que si la cargás a mano en Minikube no intente bajarla de Docker Hub
+        ports:
+        - containerPort: 5000
+        env:
+        - name: DB_HOST
+          value: mysql # nombre del service de mysql (service-db.yaml)
+        - name: DB_PORT
+          value: "3306"
+        - name: DB_USER
+          value: root
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-secret
+              key: MYSQL_ROOT_PASSWORD
+        - name: DB_NAME
+          valueFrom:
+            secretKeyRef:
+              name: mysql-secret
+              key: MYSQL_DATABASE
+

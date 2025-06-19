@@ -1,0 +1,217 @@
+/* MisCanchas.css - Tema Verde Profesional */
+
+.mis-canchas-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Títulos */
+.mis-canchas-container h2 {
+    color: #1b5e20;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.mis-canchas-container h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #4caf50, #8bc34a);
+    border-radius: 3px;
+}
+
+.mis-canchas-container h3 {
+    color: #2e7d32;
+    font-size: 1.5rem;
+    margin: 2rem 0 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e8f5e9;
+}
+
+/* Formulario */
+.mis-canchas-container form {
+    background: #f8fbf8;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    margin-bottom: 3rem;
+    border: 1px solid #e8f5e9;
+}
+
+.mis-canchas-container input,
+.mis-canchas-container select {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1.2rem;
+    border: 2px solid #e0f2e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+    color: #2e3d49;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.mis-canchas-container input:focus,
+.mis-canchas-container select:focus {
+    outline: none;
+    border-color: #66bb6a;
+    box-shadow: 0 5px 15px rgba(102, 187, 106, 0.15);
+    transform: translateY(-2px);
+}
+
+.mis-canchas-container select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234caf50'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.2rem;
+    cursor: pointer;
+    padding-right: 2.5rem;
+}
+
+/* Botones del Formulario */
+.mis-canchas-container form button[type="submit"] {
+    background: linear-gradient(135deg, #388e3c, #4caf50);
+    color: white;
+    border: none;
+    padding: 1rem 1.8rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+    box-shadow: 0 4px 6px rgba(56, 142, 60, 0.15);
+    width: 100%;
+    letter-spacing: 0.5px;
+}
+
+.mis-canchas-container form button[type="submit"]:hover {
+    background: linear-gradient(135deg, #2e7d32, #43a047);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(56, 142, 60, 0.2);
+}
+
+.mis-canchas-container form button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+/* Lista de Canchas */
+.mis-canchas-container ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+.mis-canchas-container li {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #4caf50;
+    transition: all 0.3s ease;
+}
+
+.mis-canchas-container li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.mis-canchas-container li strong {
+    color: #1b5e20;
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.mis-canchas-container li br {
+    margin: 0.5rem 0;
+    content: " ";
+    display: block;
+}
+
+/* Botones de Acción */
+.mis-canchas-container li button {
+    padding: 0.6rem 1.2rem;
+    margin-right: 0.8rem;
+    margin-top: 0.8rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mis-canchas-container li button:first-of-type {
+    background-color: #2196f3;
+    color: white;
+}
+
+.mis-canchas-container li button:first-of-type:hover {
+    background-color: #1976d2;
+    transform: translateY(-2px);
+}
+
+.mis-canchas-container li button:last-of-type {
+    background-color: #f44336;
+    color: white;
+}
+
+.mis-canchas-container li button:last-of-type:hover {
+    background-color: #d32f2f;
+    transform: translateY(-2px);
+}
+
+/* Separador */
+.mis-canchas-container hr {
+    border: none;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 2.5rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .mis-canchas-container {
+        padding: 1.5rem;
+    }
+    
+    .mis-canchas-container ul {
+        grid-template-columns: 1fr;
+    }
+    
+    .mis-canchas-container form {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .mis-canchas-container {
+        padding: 1rem;
+    }
+    
+    .mis-canchas-container h2 {
+        font-size: 1.6rem;
+    }
+    
+    .mis-canchas-container h3 {
+        font-size: 1.3rem;
+    }
+    
+    .mis-canchas-container li button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}

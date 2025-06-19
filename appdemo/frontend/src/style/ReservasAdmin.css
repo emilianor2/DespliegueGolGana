@@ -1,0 +1,152 @@
+/* ReservasAdmin.css - Tema verde */
+
+.reservas-admin-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .reservas-admin-title {
+    color: #2e7d32;
+    font-size: 28px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #8bc34a;
+    text-align: center;
+  }
+  
+  .reservas-lista {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .reserva-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f1f8e9;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    border-left: 4px solid #4caf50;
+  }
+  
+  .reserva-item:hover {
+    transform: translateX(5px);
+  }
+  
+  .reserva-info {
+    flex: 2;
+  }
+  
+  .reserva-fecha, .reserva-hora {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: 500;
+  }
+  
+  .reserva-estado {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .estado-pendiente {
+    background-color: #fff9c4;
+    color: #ffa000;
+  }
+  
+  .estado-confirmada {
+    background-color: #c8e6c9;
+    color: #2e7d32;
+  }
+  
+  .estado-cancelada {
+    background-color: #ffcdd2;
+    color: #c62828;
+  }
+  
+  .reserva-botones {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .btn-confirmar {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-confirmar:hover {
+    background-color: #1b5e20;
+  }
+  
+  .btn-cancelar {
+    background-color: #e53935;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-cancelar:hover {
+    background-color: #c62828;
+  }
+  
+  .sin-reservas {
+    text-align: center;
+    color: #757575;
+    padding: 30px 0;
+    font-style: italic;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+  }
+  
+  /* Datos adicionales */
+  .reserva-detalles {
+    flex-basis: 100%;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed #c5e1a5;
+  }
+  
+  .reserva-detalles p {
+    margin: 5px 0;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .reserva-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .reserva-botones {
+      margin-top: 15px;
+      width: 100%;
+      justify-content: space-between;
+    }
+    
+    .reservas-admin-container {
+      padding: 15px;
+      margin: 10px;
+    }
+  }

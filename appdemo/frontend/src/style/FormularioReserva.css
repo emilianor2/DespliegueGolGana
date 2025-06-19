@@ -1,0 +1,359 @@
+/* FormularioReserva.css */
+
+/* Estilos generales */
+body {
+  font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+  background-color: #f7f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal */
+.reserva-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header de la reserva con decoración de fútbol */
+.reserva-header {
+  background-color: var(--verde-oscuro);
+  color: var(--blanco-texto);
+  margin: -2rem -2rem 2rem -2rem;
+  padding: 2rem;
+  border-bottom: 5px solid var(--verde-principal);
+  position: relative;
+  text-align: center;
+}
+
+.football-decoration::before,
+.football-decoration::after {
+  content: '⚽';
+  position: absolute;
+  font-size: 1.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.football-decoration::before {
+  left: 2rem;
+}
+
+.football-decoration::after {
+  right: 2rem;
+}
+
+.reserva-header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Información de la cancha */
+.cancha-info {
+  background-color: var(--gris-claro);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-left: 5px solid var(--verde-principal);
+}
+
+.cancha-info p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.label {
+  font-weight: bold;
+  color: var(--verde-oscuro);
+}
+
+/* Título de sección */
+.seccion-titulo {
+  font-size: 1.5rem;
+  color: var(--verde-oscuro);
+  border-bottom: 2px solid var(--verde-claro);
+  padding-bottom: 0.5rem;
+  margin: 2rem 0 1rem;
+}
+
+/* Leyenda de colores */
+.leyenda {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+}
+
+.leyenda-item {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.leyenda-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  margin-right: 8px;
+  border: 1px solid #ddd;
+}
+
+.color-disponible {
+  background-color: var(--verde-disponible);
+}
+
+.color-seleccionado {
+  background-color: var(--verde-seleccionado);
+}
+
+.color-ocupado {
+  background-color: var(--rojo-ocupado);
+}
+
+.color-pasado {
+  background-color: var(--gris-pasado);
+}
+
+/* Tabla de horarios */
+.tabla-horarios {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tabla-horarios th {
+  background-color: var(--verde-principal);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.tabla-horarios tr:nth-child(even) {
+  background-color: rgba(236, 240, 241, 0.5);
+}
+
+.tabla-horarios td {
+  padding: 0.8rem;
+  text-align: center;
+  border: 1px solid #ddd;
+  transition: all 0.2s ease;
+}
+
+.hora-celda {
+  font-weight: bold;
+  background-color: var(--verde-oscuro);
+  color: white;
+}
+
+/* Celdas para horarios */
+.celda-disponible {
+  background-color: var(--verde-disponible);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.celda-disponible:hover {
+  background-color: #7dcea0;
+  transform: scale(1.05);
+}
+
+.celda-seleccionada {
+  background-color: var(--verde-seleccionado) !important;
+  color: white;
+  font-weight: bold;
+  border: 2px solid var(--verde-oscuro) !important;
+}
+
+.celda-ocupada {
+  background-color: var(--rojo-ocupado);
+  cursor: not-allowed;
+  color: #943126;
+  font-weight: bold;
+}
+
+.celda-pasada {
+  background-color: var(--gris-pasado);
+  cursor: not-allowed;
+  color: var(--gris-oscuro);
+  font-style: italic;
+}
+
+/* Formulario de reserva */
+.reserva-form {
+  background-color: var(--gris-claro);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: var(--verde-oscuro);
+}
+
+.form-group select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: white;
+  cursor: pointer;
+}
+
+.form-group select:focus {
+  outline: none;
+  border-color: var(--verde-principal);
+  box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.3);
+}
+
+/* Botón de envío */
+.submit-button {
+  background-color: var(--verde-principal);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  width: 100%;
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 6px rgba(20, 90, 50, 0.2);
+}
+
+.submit-button:hover {
+  background-color: var(--verde-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(20, 90, 50, 0.25);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(20, 90, 50, 0.2);
+}
+
+.submit-button:disabled {
+  background-color: var(--gris-oscuro);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Fecha seleccionada */
+.fecha-seleccionada {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  border-left: 4px solid var(--verde-principal);
+}
+
+.fecha-seleccionada-label {
+  font-weight: bold;
+  color: var(--verde-oscuro);
+  margin-right: 8px;
+}
+
+/* Alertas y mensajes */
+.alert {
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 1rem 0;
+  font-weight: bold;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .reserva-container {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .reserva-header {
+    margin: -1rem -1rem 1.5rem -1rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .reserva-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .football-decoration::before,
+  .football-decoration::after {
+    display: none;
+  }
+
+  .tabla-horarios {
+    font-size: 0.85rem;
+  }
+
+  .tabla-horarios th,
+  .tabla-horarios td {
+    padding: 0.5rem 0.3rem;
+  }
+
+  .leyenda {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .leyenda-item {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Animaciones */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.celda-seleccionada {
+  animation: pulse 2s infinite;
+}

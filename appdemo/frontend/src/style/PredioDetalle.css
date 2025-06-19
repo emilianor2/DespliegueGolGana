@@ -1,0 +1,134 @@
+/* PredioDetalle.css - Tema verde */
+
+.predio-detalle-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .predio-titulo {
+    color: #2e7d32;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .predio-ubicacion {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .predio-ubicacion::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #4caf50;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  
+  .predio-info {
+    background-color: #e8f5e9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border-left: 4px solid #4caf50;
+  }
+  
+  .predio-info p {
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .canchas-titulo {
+    color: #1b5e20;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #8bc34a;
+  }
+  
+  .canchas-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .cancha-item {
+    background-color: #f1f8e9;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-left: 4px solid #8bc34a;
+  }
+  
+  .cancha-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cancha-item p {
+    margin-bottom: 8px;
+  }
+  
+  .cancha-item strong {
+    color: #2e7d32;
+    font-weight: bold;
+  }
+  
+  .btn-reservar {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+  }
+  
+  .btn-reservar:hover {
+    background-color: #1b5e20;
+  }
+  
+  .sin-canchas {
+    text-align: center;
+    color: #757575;
+    padding: 30px 0;
+    font-style: italic;
+  }
+  
+  .cargando {
+    text-align: center;
+    color: #2e7d32;
+    padding: 30px 0;
+    font-weight: bold;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .canchas-lista {
+      grid-template-columns: 1fr;
+    }
+    
+    .predio-detalle-container {
+      padding: 15px;
+      margin: 10px;
+    }
+  }

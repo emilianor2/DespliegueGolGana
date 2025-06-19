@@ -1,0 +1,121 @@
+/* Predios.css - Tema Verde */
+
+.predios-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    font-family: 'Inter', sans-serif;
+    border: 1px solid #e8f5e9;
+}
+
+.predios-container h2 {
+    color: #2e7d32;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #8bc34a;
+    text-align: center;
+}
+
+/* Formulario */
+.predios-container form {
+    background-color: #f8fbf8;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.predios-container input {
+    padding: 1rem;
+    border: 2px solid #e0f2e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+}
+
+.predios-container input:focus {
+    outline: none;
+    border-color: #66bb6a;
+    box-shadow: 0 0 0 3px rgba(102, 187, 106, 0.2);
+}
+
+/* Botón */
+.predios-container button[type="submit"] {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.predios-container button[type="submit"]:hover {
+    background-color: #1b5e20;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Lista de información del predio */
+.predios-container ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+    background-color: #f8fbf8;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #4caf50;
+}
+
+.predios-container li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #e0f2e9;
+    color: #37474f;
+    font-size: 1.05rem;
+}
+
+.predios-container li:last-child {
+    border-bottom: none;
+}
+
+.predios-container li strong {
+    color: #2e7d32;
+    margin-right: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .predios-container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    
+    .predios-container h2 {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .predios-container {
+        padding: 1.2rem;
+    }
+    
+    .predios-container form,
+    .predios-container ul {
+        padding: 1.2rem;
+    }
+    
+    .predios-container input {
+        padding: 0.8rem;
+    }
+}
