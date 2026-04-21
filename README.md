@@ -1,30 +1,78 @@
-# GolGana Minikube Deployment
+# ⚽ GolGana – Sports Booking Platform (Kubernetes Deployment)
 
-This repository contains a demo application with a Node.js backend and a React frontend. `setup_minikube.sh` can be used to install the required tools, build the Docker images, push them to Docker Hub and deploy everything on a local Minikube cluster.
+> Full stack application deployed on Kubernetes demonstrating backend and DevOps skills.
 
-## Quick start
+---
 
-```bash
+## 📌 Description
+
+GolGana is a web platform for managing and booking sports fields.
+
+This project was developed as an academic project and demonstrates the full development lifecycle:
+👉 backend + frontend + containers + Kubernetes deployment.
+
+---
+
+## 🚀 What this project demonstrates
+
+* ✔️ Full stack development (Node.js + React)
+* ✔️ Containerization with Docker
+* ✔️ Deployment with Kubernetes (Minikube)
+* ✔️ Environment automation with scripts
+* ✔️ Database integration
+
+---
+
+## 🛠️ Technologies
+
+* Node.js + Express
+* React
+* MySQL
+* Docker
+* Kubernetes (Minikube)
+
+---
+
+## ⚙️ Architecture
+
+* Backend API REST (Node.js)
+* Frontend SPA (React)
+* MySQL database
+* Docker containers
+* Kubernetes orchestration
+
+---
+
+## 🚀 Automated deployment
+
+The script `setup_minikube.sh`:
+
+* Installs required tools (Docker, kubectl, Minikube)
+* Builds Docker images
+* Pushes them to Docker Hub
+* Deploys the application to Kubernetes
+
+---
+
+## ▶️ Quick Start
+
+```bash id="gk01"
 ./setup_minikube.sh
 ```
 
-The script expects Docker Hub credentials. You can optionally export `DOCKER_USER` and `DOCKER_PASSWORD` environment variables before running it. By default, the Docker Hub username `emilianor` is used.
+Access the app:
 
-## Prerequisites
+```bash id="gk02"
+minikube service frontend-service -n dev
+```
 
-- **Node.js** 18 or later and **npm** for running the application locally.
-- **Docker**, **kubectl** and **Minikube** for the deployment script.
-- A running **MySQL** instance when starting the application outside of Minikube.
+---
 
-`setup_minikube.sh` will install Docker, kubectl and Minikube automatically if they are not already present on the system.
-
-## Environment variables
-
-The backend and frontend rely on several environment variables. Sample `.env` files exist in `appdemo/backend` and `appdemo/frontend`.
+## ⚙️ Environment variables
 
 ### Backend
 
-```
+```env id="gk03"
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_USER=root
@@ -37,48 +85,52 @@ OPEN_CAGE_API_KEY=<key>
 
 ### Frontend
 
-```
+```env id="gk04"
 VITE_OPENCAGE_API_KEY=<key>
 ```
 
-### Docker Hub
+---
 
-The deployment script uses the following variables to push images:
+## 🧪 Local execution
 
+```bash id="gk05"
+cd appdemo
+npm install
+npm start
 ```
-DOCKER_USER=<docker hub username>
-DOCKER_PASSWORD=<docker hub password>
-```
 
-## Running with Minikube
+---
 
-1. Export your Docker Hub credentials (optional if you want to enter them interactively):
-   ```bash
-   export DOCKER_USER=myuser
-   export DOCKER_PASSWORD=mypassword
-   ```
-2. Execute the setup script:
-   ```bash
-   ./setup_minikube.sh
-   ```
-   It builds the Docker images, pushes them to Docker Hub and deploys all Kubernetes manifests on a local Minikube cluster.
-3. When the pods are ready you can access the frontend with:
-   ```bash
-   minikube service frontend-service -n dev
-   ```
+## 📦 Requirements
 
-## Running locally
+* Node.js 18+
+* Docker
+* Minikube
+* MySQL
 
-To run the Node.js API and the React client without Docker or Minikube:
+---
 
-1. Ensure a MySQL server is running with the credentials configured in `appdemo/backend/.env`.
-2. Install dependencies:
-   ```bash
-   cd appdemo
-   npm install
-   ```
-3. Start both servers:
-   ```bash
-   npm start
-   ```
-   The backend will listen on the port defined in `.env` (defaults to `5000`) and the frontend on port `5173`.
+# 🇪🇸 Versión en español
+
+## 📌 Descripción
+
+GolGana es una plataforma web para la gestión y reserva de canchas deportivas.
+
+Este proyecto demuestra el ciclo completo de desarrollo:
+backend + frontend + contenedores + despliegue en Kubernetes.
+
+---
+
+## 🚀 Qué demuestra este proyecto
+
+* Desarrollo full stack
+* Uso de Docker
+* Deploy en Kubernetes
+* Automatización de entorno
+* Integración con base de datos
+
+---
+
+## 👨‍💻 Autor
+
+Emiliano Rodríguez
